@@ -1,2 +1,2 @@
 # Pig Game
- pig dicce game made with vanilla js
+ pig dice game made with vanilla js
