@@ -1,0 +1,204 @@
+html {
+  font-size: 2vw;
+}
+body {
+  background-image: url(jr-korpa-EDw2Okl1aG0-unsplash.jpg);
+  background-size: cover;
+}
+.game-text-container {
+  box-shadow: 2px -3px 39px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  background: linear-gradient(to right, #fff 50%, rgb(230, 230, 230) 50%);
+  width: 70vw;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 2vh;
+  border-radius: 10%;
+}
+
+.new-game-container {
+  width: 100%;
+  text-align: center;
+  padding-top: 1em;
+}
+.reset-game {
+  font-weight: bold;
+  -webkit-animation: pulsate-fwd 1s ease-in-out infinite both;
+  animation: pulsate-fwd 1s ease-in-out infinite both;
+}
+.game-bttn {
+  font-size: 1.15rem;
+}
+.player-name-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+.player-name {
+  color: #065f65;
+  font-size: 2rem;
+}
+#p1-active-circle,
+#p2-active-circle {
+  visibility: hidden;
+  display: inline-block;
+  border-radius: 50%;
+  width: 1vw;
+  height: 1vw;
+  background-color: #5a0b4d;
+  position: relative;
+  bottom: 1vh;
+  margin-right: 1vw;
+}
+.round-score-container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-around;
+  color: #065f65;
+}
+.round-score {
+  font-size: 2.5rem;
+}
+.dice-image-container {
+  width: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  bottom: 45%;
+  left: 40%;
+  z-index: 2;
+}
+#dice1,
+#dice2 {
+  width: 50%;
+  height: auto;
+}
+.current-score-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 55%;
+}
+.current-score-square {
+  background-color: #963203;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+.current-score-text {
+  font-size: 0.75rem;
+  margin-top: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: #fff;
+}
+.current-score-num {
+  color: #fff;
+}
+.hold-roll-final {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  text-align: center;
+  position: relative;
+  z-index: 4;
+}
+/* class added to all 'button' elements in the game */
+.game-bttn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.15em 1.25em;
+  color: black;
+  font-weight: lighter;
+}
+.game-bttn:hover,
+.game-bttn:active {
+  font-weight: bold;
+  color: #5a0b4d;
+  text-decoration: underline;
+}
+#roll {
+  margin-bottom: 2.5%;
+}
+#final {
+  font-size: 1rem;
+  background: none;
+  border: none;
+  width: 5%;
+  margin-top: 5%;
+  box-shadow: none;
+  text-align: center;
+  font-weight: lighter;
+}
+#final:active,
+#final:focus {
+  padding: 0.25em 0.75em;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+/* removes final score input element's up and down arrows*/
+#final::-webkit-outer-spin-button,
+#final::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#final[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/*---------- styles added with javascript-------------*/
+
+/*  background when player 2 is active player*/
+#inactive {
+    background: linear-gradient(to left, #fff 50%, rgb(214, 214, 214) 50%);
+  }
+/* Animation for  starting a new game button final score input  after game has been won */
+@-webkit-keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @keyframes pulsate-fwd {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  /* adding animation to final score button after game reset*/
+.add-score {
+  -webkit-animation: pulsate-fwd 1s ease-in-out infinite both;
+  animation: pulsate-fwd 1s ease-in-out infinite both;
+}
+/* styles for 'winning player' name */
+.winner {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #5a0b4d;
+}
